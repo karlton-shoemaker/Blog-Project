@@ -1,4 +1,5 @@
-﻿using System;
+﻿using blog_template_practice.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -13,5 +14,6 @@ namespace blog_template_practice.Repositories
         void Create(T obj);
         void Delete(T obj);
         void Update(T obj);
+        List<Category> Categories();
     }
 }

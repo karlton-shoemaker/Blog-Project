@@ -33,12 +33,12 @@ namespace blog_template_practice
                 },
                 new Category()
                 {
-                    Id = 2,
+                    Id = 3,
                     Name = "Video Games"
                 },
                 new Category()
                 {
-                    Id = 3,
+                    Id = 2,
                     Name = "Movies"
                 }
                 ) ;

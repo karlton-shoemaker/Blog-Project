@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using blog_template_practice.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,6 +42,11 @@ namespace blog_template_practice.Repositories
         {
             db.Set<T>().Remove(entity);
             db.SaveChanges();
+        }
+
+        public List<Category> Categories()
+        {
+            return db.Set<Category>().ToList();
         }
     }
 }
