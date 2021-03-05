@@ -19,7 +19,9 @@ namespace blog_template_practice.Controllers
 
         public ViewResult Index()
         {
-            return View();
+            var categoryList = categoryRepo.GetAll();
+
+            return View(categoryList);
         }
     }
 }

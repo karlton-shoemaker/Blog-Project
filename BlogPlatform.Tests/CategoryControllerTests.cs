@@ -31,12 +31,12 @@ namespace blog_template_practice.Tests
         [Fact]
         public void Index_Passes_All_Categories_To_View()
         {
-            //var expectedCategories = new List<Category>();
-            //categoryRepo.GetAll().Returns(expectedCategories);
+            var expectedCategories = new List<Category>();
+            categoryRepo.GetAll().Returns(expectedCategories);
 
-            //var result = sut.Index();
+            var result = sut.Index();
 
-            //Assert.Equal(expectedCategories, result.Model);
+            Assert.Equal(expectedCategories, result.Model);
         }
 
         [Fact]

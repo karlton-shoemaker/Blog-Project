@@ -1,7 +1,27 @@
-﻿
+﻿@model IEnumerable<blog_template_practice.Models.Category>
+
 @{
-    Layout = null; 
+    Layout = null;
 }
 
-<h1>Index</h1>
 
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Categories</title>
+</head>
+<body>
+    <header>
+    </header>
+    <main>
+        <h1>Discussion Topics</h1>
+        @foreach (var item in Model)
+        {
+            <p>@item.Id. @item.Name</p>
+            
+        }
+    </main>
+</body>
+</html>
