@@ -23,5 +23,12 @@ namespace blog_template_practice.Controllers
 
             return View(categoryList);
         }
+
+        public ViewResult Details(int id)
+        {
+            var category = categoryRepo.GetById(id);
+
+            return View(category);
+        }
     }
 }

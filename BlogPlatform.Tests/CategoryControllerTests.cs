@@ -42,20 +42,20 @@ namespace blog_template_practice.Tests
         [Fact]
         public void Details_Returns_A_View()
         {
-            //var result = sut.Details(1);
+            var result = sut.Details(1);
 
-            //Assert.IsType<ViewResult>(result);
+            Assert.IsType<ViewResult>(result);
         }
 
         [Fact]
         public void Details_Passes_Category_To_View()
         {
-            //var expectedCategory = new Category();
-            //categoryRepo.GetById(1).Returns(expectedCategory);
+            var expectedCategory = new Category();
+            categoryRepo.GetById(1).Returns(expectedCategory);
 
-            //var result = sut.Details(1);
+            var result = sut.Details(1);
 
-            //Assert.Equal(expectedCategory, result.Model);
+            Assert.Equal(expectedCategory, result.Model);
         }
     }
 }
