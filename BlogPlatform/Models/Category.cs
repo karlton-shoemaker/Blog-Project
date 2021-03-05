@@ -10,6 +10,8 @@ namespace blog_template_practice.Models
         public int Id { get; set; }
         public string Name { get; set; }
 
+        public virtual ICollection<Content> Posts { get; set; }
+
         public Category()
         {
 

@@ -17,5 +17,6 @@ namespace blog_template_practice.Controllers
             this.contentRepo = contentRepo;
         }
 
+
     }
 }

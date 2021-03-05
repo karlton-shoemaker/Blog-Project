@@ -17,5 +17,9 @@ namespace blog_template_practice.Controllers
             this.categoryRepo = categoryRepo;
         }
 
+        public ViewResult Index()
+        {
+            return View();
+        }
     }
 }

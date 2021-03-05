@@ -23,9 +23,9 @@ namespace blog_template_practice.Tests
         [Fact]
         public void Index_Returns_A_View()
         {
-            //var result = sut.Index();
+            var result = sut.Index();
 
-            //Assert.IsType<ViewResult>(result);
+            Assert.IsType<ViewResult>(result);
         }
 
         [Fact]
