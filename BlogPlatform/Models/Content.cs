@@ -8,13 +8,31 @@ namespace blog_template_practice.Models
 {
     public class Content
     {
+        private string author;
 
         public int Id { get; set; }
         public string Title { get; set; }
         [Display (Name = "Your opinion")]
         public string Body { get; set; }
         [Display (Name = "Username")]
-        public string Author { get; set; }
+        public string Author 
+        {
+            get
+            {
+                return author;
+            }
+            set
+            {
+                if (String.IsNullOrEmpty(value))
+                {
+                    author = "Anonymous";
+                }
+                else
+                {
+                    author = value;
+                }
+            }
+        }
         public DateTime PostDate { get; set;}
         public string PublishDate { get; set; }
 
