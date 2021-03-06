@@ -86,28 +86,28 @@ namespace blog_template_practice.Tests
         [Fact]
         public void Update_Returns_ViewResult()
         {
-            //var result = sut.Update(1);
+            var result = sut.Update(1);
 
-            //Assert.IsType<ViewResult>(result);
+            Assert.IsType<ViewResult>(result);
         }
 
         [Fact]
         public void Update_Passes_Content_To_View()
         {
-            //var expectedContent = new Content();
-            //contentRepo.GetById(1).Returns(expectedContent);
+            var expectedContent = new Content();
+            contentRepo.GetById(1).Returns(expectedContent);
 
-            //var result = sut.Update(1);
+            var result = sut.Update(1);
 
-            //Assert.Equal(expectedContent, result.Model);
+            Assert.Equal(expectedContent, result.Model);
         }
 
         [Fact]
         public void Update_Post_Returns_ActionResult()
         {
-            //var result = sut.Update(new Content());
+            var result = sut.Update(new Content());
 
-            //Assert.IsAssignableFrom<ActionResult>(result);
+            Assert.IsAssignableFrom<ActionResult>(result);
         }
 
         [Fact]

@@ -13,6 +13,13 @@ namespace blog_template_practice.Controllers
     {
         IRepository<Content> contentRepo;
 
+        public void SetupCategoryViewBag()
+        {
+            var listOfCategories = contentRepo.Categories();
+
+            ViewBag.CategoryId = listOfCategories;
+        }
+
         public ContentController(IRepository<Content> contentRepo)
         {
             this.contentRepo = contentRepo;
@@ -34,9 +41,7 @@ namespace blog_template_practice.Controllers
 
         public ViewResult Create()
         {
-            var listOfCategories = contentRepo.Categories();
-
-            ViewBag.CategoryId = new SelectList(listOfCategories, "Id", "Name");
+            SetupCategoryViewBag();
 
             return View(new Content());
         }
@@ -44,9 +49,7 @@ namespace blog_template_practice.Controllers
         [HttpPost]
         public ActionResult Create(Content model)
         {
-            var listOfCategories = contentRepo.Categories();
-
-            ViewBag.CategoryId = new SelectList(listOfCategories, "Id", "Name");
+            SetupCategoryViewBag();
 
             contentRepo.Create(model);
 
@@ -69,6 +72,23 @@ namespace blog_template_practice.Controllers
         public ActionResult Delete(Content model)
         {
             contentRepo.Delete(model);
+
+            return RedirectToAction("Index", "Category");
+        }
+
+        public ViewResult Update(int id)
+        {
+            SetupCategoryViewBag();
+
+            var post = contentRepo.GetById(id);
+
+            return View(post);
+        }
+
+        [HttpPost]
+        public ActionResult Update(Content model)
+        {
+            contentRepo.Update(model);
 
             return RedirectToAction("Index", "Category");
         }
