@@ -50,12 +50,27 @@ namespace blog_template_practice.Controllers
 
             contentRepo.Create(model);
 
-            return RedirectToAction("");
+            return RedirectToAction("Index", "Category");
         }
 
         public ViewResult CreateByCategoryId(int id)
         {
             return View();
+        }
+
+        public ViewResult Delete(int id)
+        {
+            var post = contentRepo.GetById(id);
+
+            return View(post);
+        }
+
+        [HttpPost]
+        public ActionResult Delete(Content model)
+        {
+            contentRepo.Delete(model);
+
+            return RedirectToAction("Index", "Category");
         }
     }
 }
