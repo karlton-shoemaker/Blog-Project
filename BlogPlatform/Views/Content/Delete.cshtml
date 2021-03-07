@@ -3,7 +3,7 @@
 
 <main>
     <h2>Are you sure you want to delete this post?</h2>
-    <div>
+    <div class="form-group">
         <h4>Post Under Consideration</h4>
         <dl class="row">
             <dt class="col-sm-2">
@@ -41,7 +41,7 @@
         <form asp-action="Delete">
             <input type="hidden" asp-for="Id" />
             <input type="submit" value="Delete" class="btn btn-danger" /> |
-            <p><a href="/Category/">Back to Topic List</a></p>
+            <p><a href="/Home/">Home</a></p>
         </form>
     </div>
 </main>

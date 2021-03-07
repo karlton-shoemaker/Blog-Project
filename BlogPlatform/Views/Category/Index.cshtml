@@ -4,9 +4,10 @@
     <h1>Discussion Topics</h1>
     @foreach (var item in Model)
     {
-        <p>@item.Id. <a href="/Category/Details/@item.Id">@item.Name</a></p>
-            
+        <p><a href="/Category/Details/@item.Id">@item.Name</a></p>
+        @*<p><a href="/Content/CreateByCategoryId/@item.Id">Add a Post About @item.Name</a></p>*@    
     }
 
     <p><a href="/Content/Create/">Submit Post</a></p>
+    <p><a href="/Home/">Home</a></p>
 </main>

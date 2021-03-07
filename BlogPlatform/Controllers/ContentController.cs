@@ -45,6 +45,14 @@ namespace blog_template_practice.Controllers
 
             return View(new Content());
         }
+        public ViewResult CreateByCategoryId(int id)
+        {
+            //var category = categoryRepo.GetById(id);
+            //int categoryId = contentRepo.GetById(id).Category.Id;
+            //SetupCategoryViewBag();
+
+            return View(new Content() {CategoryId = id });
+        }
 
         [HttpPost]
         public ActionResult Create(Content model)
@@ -54,11 +62,6 @@ namespace blog_template_practice.Controllers
             contentRepo.Create(model);
 
             return RedirectToAction("Index", "Category");
-        }
-
-        public ViewResult CreateByCategoryId(int id)
-        {
-            return View();
         }
 
         public ViewResult Delete(int id)

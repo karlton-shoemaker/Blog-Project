@@ -26,6 +26,10 @@ hr{
     border:none;
 }
 
+textarea{
+    resize:none;
+}
+
 .form-group{
     display:grid;
     max-width:60%;
@@ -44,10 +48,6 @@ hr{
     font-size:18px;
 }
 
-/*.PostBody{
-
-}*/
-
 .EntirePost {
     background-color: darkgrey;
     padding: 1em 2em;
@@ -56,4 +56,8 @@ hr{
 
 .ByLine{
     color:maroon;
+}
+
+dl{
+    display:grid;
 }

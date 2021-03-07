@@ -45,6 +45,15 @@ namespace blog_template_practice.Models
             PostDate = DateTime.Now;
         }
 
+        public Content(Category model)
+        {
+            Category = model;
+            CategoryId = model.Id;
+            //Category.Name = name;
+            //Category.Id = id;
+            PostDate = DateTime.Now;
+        }
+
         public Content(int id, string title, string body, string author)
         {
             Id = id;
