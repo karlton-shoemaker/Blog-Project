@@ -1,9 +1,10 @@
 ﻿@model IEnumerable<blog_template_practice.Models.Content>
 
+<main>
+    <h1>Index</h1>
 
-<h1>Index</h1>
-
-@foreach (var item in Model)
-	{
-		 <p>@item.Title</p>
-	}
+    @foreach (var item in Model)
+    {
+        <p>@item.Title</p>
+    }
+</main>

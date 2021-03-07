@@ -1,14 +1,18 @@
 ﻿@model blog_template_practice.Models.Category
 
-<p>@Model.Name</p>
+<main>
+    <h2 class="CategoryTitle">@Model.Name</h2>
 
-@foreach (var item in Model.Posts)
-{
-    <p>@item.Title</p>
-    <p>@item.Body</p>
-    <p>By: @item.Author, on @item.PostDate</p>
-    <p><a href="/Content/Update/@item.Id">Edit Post</a></p>
-    <p><a href="/Content/Delete/@item.Id">Delete Post</a></p>
-}
+    @foreach (var item in Model.Posts)
+        {
+        <div class="EntirePost">
+            <p class="PostTitle">@item.Title</p>
+            <p class="PostBody">@item.Body</p>
+            <p class="ByLine">By: @item.Author, on @item.PostDate</p>
+            <p><a href="/Content/Update/@item.Id">Edit Post</a> | <a href="/Content/Delete/@item.Id">Delete Post</a></p>
+        </div>
+        <hr />
+        }
 
-<p><a href="/Category/">Back to Topic List</a></p>
+    <p><a href="/Category/">Back to Topic List</a></p>
+</main>
