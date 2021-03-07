@@ -1,14 +1,12 @@
-﻿﻿body {
-    /*font-family: Arial, Helvetica, sans-serif;
-    box-sizing: border-box;*/
-/*    margin: 0;
-    padding: 0;
-*/    /*line-height: 1.618em;*/
-    background-color:red;
+﻿﻿
+
+body{
+    background-color:crimson;
+    color:saddlebrown;
+    font-family:Arial, Helvetica, sans-serif
 }
 
 main{
-    color:saddlebrown;
     max-width:50%;
     max-height:90%;
     margin:auto;
@@ -45,7 +43,7 @@ textarea{
     font-size:18px;
 }
 
-.EntirePost {
+.EntirePost{
     background-color: darkgrey;
     padding: 1em 2em;
     border-radius: 15px;
