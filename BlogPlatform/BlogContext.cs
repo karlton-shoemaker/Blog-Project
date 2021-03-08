@@ -29,17 +29,20 @@ namespace blog_template_practice
                 new Category()
                 {
                     Id = 1,
-                    Name = "Food"
+                    Name = "Food",
+                    Description = "You know, it's that stuff you eat! People grow stuff, raise livestock, gather fruits and whatnot... then other people market and sell it, you buy it, cook it and then shove it down your mouth-hole. Or eat it raw. Whatever, it's you're body. You know, you are what you eat, so it's basically you."
                 },
                 new Category()
                 {
                     Id = 3,
-                    Name = "Video Games"
+                    Name = "Video Games",
+                    Description = "Modern technology has led to incredible feats of engineering that allow us to experience crazy adventures all from our own homes in the form of video games. Whether puzzles, shooters, adventures, sports, you can do pretty much anything with video games. What will they think of next?"
                 },
                 new Category()
                 {
                     Id = 2,
-                    Name = "Movies"
+                    Name = "Movies",
+                    Description = "The moving pictures, they were once called. Movies take us on incredible fantastic adventures and let us explore the human psyche through watching beautiful people perfom amazing stories all for our amusement."
                 }
                 ) ;
 
@@ -62,7 +65,7 @@ namespace blog_template_practice
                     Body = "Oh the kids these days with their confounded superheroes. Everyone always says \"Oh this one is different, it's new and better than all the others\" but it's not! There's always the implausible origin story, with a tortured too-long build to make them into the superhero we all know they are, and then once you get past that, you have to know who everyone else in the movie is. Who's that robot guy? Why does he live with the redhead? I don't have time to watch all these movies with how many times I mow my lawn. I need something that explains everything all the time. Maybe there should be more subtitles on everything.",
                     Author = "elderlycurmudgeon",
                     PublishDate = "03/05/21",
-                    CategoryId = 3,
+                    CategoryId = 2,
                     PostDate = DateTime.Now
                 },
                 new Content()
@@ -72,7 +75,7 @@ namespace blog_template_practice
                     Body = "While there are many FE characters in SSBU, the inclusion of all of them is justified. While some are similar, their differences are great enough to warrant separate characters. I won't go into specifics, but we need them all to maintain competitive play. If they do another after Byleth though, that will be too many. Also, instead of Byleth they should have included Claude in order to have an entirely upside-down character or Flayn so that they could have added a fishing mini-game.",
                     Author = "imaimaima_marthboy",
                     PublishDate = "03/05/21",
-                    CategoryId = 2,
+                    CategoryId = 3,
                     PostDate = DateTime.Now
                 }
                 ) ;

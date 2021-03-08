@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<blog_template_practice.Models.Content>
 
 <main>
-    <h1>All Your Dumb Opinions</h1>
+    <h1 id="alltop">All Your Dumb Opinions</h1>
 
     @foreach (var item in Model)
     {
@@ -13,5 +13,7 @@
         </div>
         <hr />
     }
+    <p><a href="/Category/">List of Topics</a></p>
     <p><a href="/Home/">Home</a></p>
+    <p><a href="#alltop">Back to Top</a></p>
 </main>

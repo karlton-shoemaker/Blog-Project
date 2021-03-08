@@ -76,7 +76,7 @@ namespace blog_template_practice.Controllers
         {
             contentRepo.Delete(model);
 
-            return RedirectToAction("Index", "Category");
+            return RedirectToAction("Index", "Content");
         }
 
         public ViewResult Update(int id)
@@ -93,7 +93,7 @@ namespace blog_template_practice.Controllers
         {
             contentRepo.Update(model);
 
-            return RedirectToAction("Index", "Category");
+            return RedirectToAction("Index", "Content");
         }
     }
 }

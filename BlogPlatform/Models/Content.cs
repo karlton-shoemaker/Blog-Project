@@ -9,12 +9,48 @@ namespace blog_template_practice.Models
     public class Content
     {
         private string author;
+        private string title;
+        private string body;
 
         public int Id { get; set; }
         [Display (Name = "Title:")]
-        public string Title { get; set; }
+        public string Title 
+        {
+            get
+            {
+                return title;
+            }
+            set
+            {
+                if (String.IsNullOrEmpty(value))
+                {
+                    title = "(untitled)";
+                }
+                else
+                {
+                    title = value;
+                }
+            }
+        }
         [Display (Name = "Your opinion:")]
-        public string Body { get; set; }
+        public string Body 
+        {
+            get
+            {
+                return body;
+            }
+            set
+            {
+                if (String.IsNullOrEmpty(value))
+                {
+                    body = "(no opinion, man)";
+                }
+                else
+                {
+                    body = value;
+                }
+            }
+        }
         [Display (Name = "Username:")]
         public string Author 
         {
