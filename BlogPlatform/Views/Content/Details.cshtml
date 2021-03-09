@@ -5,7 +5,7 @@
         <p class="PostTitle">@Model.Title</p>
         <p class="PostBody">@Model.Body</p>
         <p class="ByLine">By: @Model.Author, on @Model.PostDate</p>
-        <p><a href="/Content/Update/@Model.Id">Edit Post</a> | <a href="/Content/Delete/@Model.Id">Delete Post</a></p>
+        <p><a href="/Content/Update/@Model.Id">Edit Post</a> | <a href="/Content/Delete/@Model.Id">Delete Post</a> | <a href="/Comment/Create/">Add Comment</a></p>
     </div>
     <h3>Comments</h3>
     @foreach (var item in Model.Comments)
@@ -16,6 +16,5 @@
         </div>
         <hr />
     }
-    <p><a href="/Comment/Create/">Add a Comment</a></p>
     <p><a href="/Home/">Home</a></p>
 </main>

@@ -9,7 +9,7 @@
             <p class="PostTitle">@post.Title</p>
             <p class="PostBody">@post.Body</p>
             <p class="ByLine">By: @post.Author, on @post.PostDate</p>
-            <p><a href="/Content/Update/@post.Id">Edit Post</a> | <a href="/Content/Delete/@post.Id">Delete Post</a> | <a href="/Content/Details/@post.Id">View Comments and Details</a></p>
+            <p><a href="/Content/Update/@post.Id">Edit Post</a> | <a href="/Content/Delete/@post.Id">Delete Post</a> | <a href="/Comment/Create/">Add Comment</a> | <a href="/Content/Details/@post.Id">Full Post Details</a></p>
         </div>
         @foreach (var comment in post.Comments)
         {
