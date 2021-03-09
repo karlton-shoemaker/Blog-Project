@@ -78,6 +78,8 @@ namespace blog_template_practice.Models
         [Display (Name = "Topic:")]
         public virtual Category Category { get; set; }
 
+        public virtual ICollection<Comment> Comments { get; set; }
+
         public Content()
         {
             PostDate = DateTime.Now;
