@@ -11,10 +11,14 @@
             <p class="ByLine">By: @post.Author, on @post.PostDate</p>
             <p><a href="/Content/Update/@post.Id">Edit Post</a> | <a href="/Content/Delete/@post.Id">Delete Post</a> | <a href="/Content/Details/@post.Id">View Comments</a></p>
         </div>
-                @*<div class="EntireComment">
-                    <p>@post.Comment</p>
+        @*@foreach (var comment in post.Comments)
+        {
+                <div class="EntireComment">
+                    <p>@comment.Body</p>
                     <p class="ByLine">By: @comment.Author, on @comment.PostDate</p>
-                </div>*@
+                </div>
+
+        }*@
         <hr />
     }
     <p><a href="/Category/">List of Topics</a></p>

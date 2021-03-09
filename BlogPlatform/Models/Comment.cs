@@ -43,7 +43,7 @@ namespace blog_template_practice.Models
             {
                 if (String.IsNullOrEmpty(value))
                 {
-                    author = "Anonymous" + Content.RandomFood() + Content.RandomNumberAsString();
+                    author = "Anonymous" + RandomFood() + RandomNumberAsString();
                 }
                 else
                 {
@@ -60,6 +60,26 @@ namespace blog_template_practice.Models
         public Comment()
         {
             PostDate = DateTime.Now;
+        }
+
+        public string RandomFood()
+        {
+            List<string> foodItems = new List<string>()
+            {
+                "Taco","Burrito","Pancakes","Burger","FrenchFry","Apple","Pizza","Pineapple","Bratwurst","Pretzel","Crepe","Donut","Beignet","Carrot","PotRoast","Mushroom","Ham","ChickenBreast","Schnitzel","Falafel"
+            };
+            int numberOfFood = foodItems.Count;
+
+            Random random = new Random();
+            int listIndex = random.Next(numberOfFood);
+
+            return foodItems[listIndex];
+        }
+
+        public string RandomNumberAsString()
+        {
+            Random random = new Random();
+            return Convert.ToString(random.Next(101));
         }
     }
 }
