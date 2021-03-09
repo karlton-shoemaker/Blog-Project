@@ -30,5 +30,35 @@ namespace blog_template_practice.Controllers
 
             return View(category);
         }
+
+        public ViewResult Create()
+        {
+
+
+            return View(new Category());
+        }
+
+        [HttpPost] 
+        public ActionResult Create(Category model)
+        {
+            categoryRepo.Create(model);
+
+            return RedirectToAction("Index");
+        }
+
+        public ViewResult Update(int id)
+        {
+            var category = categoryRepo.GetById(id);
+
+            return View(category);
+        }
+
+        [HttpPost]
+        public ActionResult Update(Category model)
+        {
+            categoryRepo.Update(model);
+
+            return RedirectToAction("Index");
+        }
     }
 }
