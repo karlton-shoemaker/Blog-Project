@@ -1,4 +1,4 @@
-﻿@*@model IEnumerable<blog_template_practice.Models.Comment>
+﻿@model IEnumerable<blog_template_practice.Models.Comment>
 
 
 <main>
@@ -10,9 +10,10 @@
             <p class="ByLine">By: @item.Content.Author, on @item.Content.PostDate</p>
             <p><a href="/Content/Update/@item.Content.Id">Edit Post</a> | <a href="/Content/Delete/@item.Content.Id">Delete Post</a></p>
         </div>
-        <div>
+        <div class="Comment">
             <p>@item.Body</p>
             <p class="ByLine">@item.Author, on @item.PostDate</p>
         </div>
+        <hr />
     }
-</main>*@
+</main>

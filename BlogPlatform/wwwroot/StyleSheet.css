@@ -13,7 +13,7 @@ body{
 
 a{
     text-decoration:none;
-    color:#D40474;
+    color:#A8025B;
 }
 
 a:hover{
@@ -67,9 +67,10 @@ h2{
 }
 
 .Comment{
-    background-color:#567EF7;
+    background-color:#7897F5;
     padding: 1em 2em 1em 4em;
     border-radius: 15px;
+    max-width:90%;
 }
 
 .ByLine{

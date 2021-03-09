@@ -9,16 +9,17 @@
             <p class="PostTitle">@post.Title</p>
             <p class="PostBody">@post.Body</p>
             <p class="ByLine">By: @post.Author, on @post.PostDate</p>
-            <p><a href="/Content/Update/@post.Id">Edit Post</a> | <a href="/Content/Delete/@post.Id">Delete Post</a> | <a href="/Content/Details/@post.Id">View Comments</a></p>
+            <p><a href="/Content/Update/@post.Id">Edit Post</a> | <a href="/Content/Delete/@post.Id">Delete Post</a> | <a href="/Content/Details/@post.Id">View Comments and Details</a></p>
         </div>
-        @*@foreach (var comment in post.Comments)
+        @foreach (var comment in post.Comments)
         {
-                <div class="EntireComment">
+                <div class="Comment">
+                    <p>Rebuttal:</p>
                     <p>@comment.Body</p>
                     <p class="ByLine">By: @comment.Author, on @comment.PostDate</p>
                 </div>
 
-        }*@
+        }
         <hr />
     }
     <p><a href="/Category/">List of Topics</a></p>
