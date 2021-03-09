@@ -12,6 +12,8 @@ namespace blog_template_practice
         public DbSet<Content> Contents { get; set; }
         public DbSet<Category> Categories { get; set; }
 
+        public DbSet<Comment> Comments { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             var connectionString = "Server=(localdb)\\mssqllocaldb;Database=BlogDB_templatetest;Trusted_Connection=True;";
@@ -79,6 +81,33 @@ namespace blog_template_practice
                     PostDate = DateTime.Now
                 }
                 ) ;
+
+            modelBuilder.Entity<Comment>().HasData(
+                new Comment()
+                {
+                    Id = 1,
+                    Body = "Hot dogs are NOT sandwiches!!!! Why do people keep saying they are?",
+                    Author = "sandwich_purist4779",
+                    ContentId = 1,
+                    PostDate = DateTime.Now
+                },
+                new Comment()
+                {
+                    Id = 2,
+                    Body = "Okay, this is clearly talking about WandaVision, and that's not even a movie. This dude is whack",
+                    Author = "MrStrange",
+                    ContentId = 2,
+                    PostDate = DateTime.Now
+                },
+                new Comment()
+                {
+                    Id = 3,
+                    Body = "Ugh, seriously???? We only need one Fire Emblem character. Puke",
+                    Author = "kirbymain",
+                    ContentId = 3,
+                    PostDate = DateTime.Now
+                }
+                );
 
             base.OnModelCreating(modelBuilder);
         }

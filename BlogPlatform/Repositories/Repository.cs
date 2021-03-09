@@ -48,5 +48,10 @@ namespace blog_template_practice.Repositories
         {
             return db.Set<Category>().ToList();
         }
+
+        public List<Content> Contents()
+        {
+            return db.Set<Content>().ToList();
+        }
     }
 }

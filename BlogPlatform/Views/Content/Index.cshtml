@@ -3,14 +3,22 @@
 <main>
     <h1 id="alltop">All Your Dumb Opinions</h1>
 
-    @foreach (var item in Model)
+    @foreach (var post in Model)
     {
         <div class="EntirePost">
-            <p class="PostTitle">@item.Title</p>
-            <p class="PostBody">@item.Body</p>
-            <p class="ByLine">By: @item.Author, on @item.PostDate</p>
-            <p><a href="/Content/Update/@item.Id">Edit Post</a> | <a href="/Content/Delete/@item.Id">Delete Post</a></p>
+            <p class="PostTitle">@post.Title</p>
+            <p class="PostBody">@post.Body</p>
+            <p class="ByLine">By: @post.Author, on @post.PostDate</p>
+            <p><a href="/Content/Update/@post.Id">Edit Post</a> | <a href="/Content/Delete/@post.Id">Delete Post</a> | <a href="/Content/Details/@post.Id">View Comments</a></p>
         </div>
+        @*@foreach (var comment in post.Comments)
+        {
+                <div class="EntireComment">
+                    <p>@comment.Body</p>
+                    <p class="ByLine">By: @comment.Author, on @comment.PostDate</p>
+                </div>
+
+        }*@
         <hr />
     }
     <p><a href="/Category/">List of Topics</a></p>

@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using blog_template_practice;
 
 namespace BlogPlatform.Migrations
 {
     [DbContext(typeof(BlogContext))]
-    partial class BlogContextModelSnapshot : ModelSnapshot
+    [Migration("20210309015338_SeedComments")]
+    partial class SeedComments
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -89,7 +91,7 @@ namespace BlogPlatform.Migrations
                             Author = "sandwich_purist4779",
                             Body = "Hot dogs are NOT sandwiches!!!! Why do people keep saying they are?",
                             ContentId = 1,
-                            PostDate = new DateTime(2021, 3, 8, 21, 3, 6, 536, DateTimeKind.Local).AddTicks(5289)
+                            PostDate = new DateTime(2021, 3, 8, 20, 53, 37, 461, DateTimeKind.Local).AddTicks(4379)
                         },
                         new
                         {
@@ -97,7 +99,7 @@ namespace BlogPlatform.Migrations
                             Author = "MrStrange",
                             Body = "Okay, this is clearly talking about WandaVision, and that's not even a movie. This dude is whack",
                             ContentId = 2,
-                            PostDate = new DateTime(2021, 3, 8, 21, 3, 6, 536, DateTimeKind.Local).AddTicks(5507)
+                            PostDate = new DateTime(2021, 3, 8, 20, 53, 37, 462, DateTimeKind.Local).AddTicks(1125)
                         },
                         new
                         {
@@ -105,7 +107,7 @@ namespace BlogPlatform.Migrations
                             Author = "kirbymain",
                             Body = "Ugh, seriously???? We only need one Fire Emblem character. Puke",
                             ContentId = 3,
-                            PostDate = new DateTime(2021, 3, 8, 21, 3, 6, 536, DateTimeKind.Local).AddTicks(5531)
+                            PostDate = new DateTime(2021, 3, 8, 20, 53, 37, 462, DateTimeKind.Local).AddTicks(1305)
                         });
                 });
 
@@ -147,7 +149,7 @@ namespace BlogPlatform.Migrations
                             Author = "hotdogluvr_and_chipfnatic",
                             Body = "There's bread, and meat in between. What more do you need?!?!?!?!? Get some mustard in there, maybe ketchup if you're frisky, relish or chili, c'mon! Fuhgeddaboutit!!!!",
                             CategoryId = 1,
-                            PostDate = new DateTime(2021, 3, 8, 21, 3, 6, 535, DateTimeKind.Local).AddTicks(2316),
+                            PostDate = new DateTime(2021, 3, 8, 20, 53, 37, 461, DateTimeKind.Local).AddTicks(1866),
                             PublishDate = "03/05/21",
                             Title = "Hotdogs are definitely sandwiches."
                         },
@@ -157,7 +159,7 @@ namespace BlogPlatform.Migrations
                             Author = "elderlycurmudgeon",
                             Body = "Oh the kids these days with their confounded superheroes. Everyone always says \"Oh this one is different, it's new and better than all the others\" but it's not! There's always the implausible origin story, with a tortured too-long build to make them into the superhero we all know they are, and then once you get past that, you have to know who everyone else in the movie is. Who's that robot guy? Why does he live with the redhead? I don't have time to watch all these movies with how many times I mow my lawn. I need something that explains everything all the time. Maybe there should be more subtitles on everything.",
                             CategoryId = 2,
-                            PostDate = new DateTime(2021, 3, 8, 21, 3, 6, 535, DateTimeKind.Local).AddTicks(2670),
+                            PostDate = new DateTime(2021, 3, 8, 20, 53, 37, 461, DateTimeKind.Local).AddTicks(2105),
                             PublishDate = "03/05/21",
                             Title = "Marvel movies are overrated"
                         },
@@ -167,7 +169,7 @@ namespace BlogPlatform.Migrations
                             Author = "imaimaima_marthboy",
                             Body = "While there are many FE characters in SSBU, the inclusion of all of them is justified. While some are similar, their differences are great enough to warrant separate characters. I won't go into specifics, but we need them all to maintain competitive play. If they do another after Byleth though, that will be too many. Also, instead of Byleth they should have included Claude in order to have an entirely upside-down character or Flayn so that they could have added a fishing mini-game.",
                             CategoryId = 3,
-                            PostDate = new DateTime(2021, 3, 8, 21, 3, 6, 535, DateTimeKind.Local).AddTicks(2700),
+                            PostDate = new DateTime(2021, 3, 8, 20, 53, 37, 461, DateTimeKind.Local).AddTicks(2119),
                             PublishDate = "03/05/21",
                             Title = "There are not too many Fire Emblem characters in Smash Bros. Ultimate"
                         });
@@ -176,7 +178,7 @@ namespace BlogPlatform.Migrations
             modelBuilder.Entity("blog_template_practice.Models.Comment", b =>
                 {
                     b.HasOne("blog_template_practice.Models.Content", "Content")
-                        .WithMany("Comments")
+                        .WithMany()
                         .HasForeignKey("ContentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();

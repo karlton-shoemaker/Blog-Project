@@ -1,4 +1,5 @@
-﻿using System;
+﻿using blog_template_practice.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -6,34 +7,14 @@ using System.Threading.Tasks;
 
 namespace blog_template_practice.Models
 {
-    public class Content
+    public class Comment
     {
         private string author;
-        private string title;
         private string body;
 
         public int Id { get; set; }
-        [Display (Name = "Title:")]
-        public string Title 
-        {
-            get
-            {
-                return title;
-            }
-            set
-            {
-                if (String.IsNullOrEmpty(value))
-                {
-                    title = "(untitled)";
-                }
-                else
-                {
-                    title = value;
-                }
-            }
-        }
-        [Display (Name = "Your opinion:")]
-        public string Body 
+        [Display(Name = "Your opinion:")]
+        public string Body
         {
             get
             {
@@ -43,7 +24,7 @@ namespace blog_template_practice.Models
             {
                 if (String.IsNullOrEmpty(value))
                 {
-                    body = "(no opinion, man)";
+                    body = "(no comment)";
                 }
                 else
                 {
@@ -51,8 +32,8 @@ namespace blog_template_practice.Models
                 }
             }
         }
-        [Display (Name = "Username:")]
-        public string Author 
+        [Display(Name = "Username:")]
+        public string Author
         {
             get
             {
@@ -70,28 +51,15 @@ namespace blog_template_practice.Models
                 }
             }
         }
-        [Display (Name = "Date Posted:")]
-        public DateTime PostDate { get; set;}
-        public string PublishDate { get; set; }
+        [Display(Name = "Date Posted:")]
+        public DateTime PostDate { get; set; }
 
-        public int CategoryId { get; set; }
-        [Display (Name = "Topic:")]
-        public virtual Category Category { get; set; }
+        public int ContentId { get; set; }
+        public virtual Content Content { get; set; }
 
-        public virtual ICollection<Comment> Comments { get; set; }
-
-        public Content()
+        public Comment()
         {
             PostDate = DateTime.Now;
-        }
-
-        public Content(int id, string title, string body, string author, string publishDate)
-        {
-            Id = id;
-            Title = title;
-            Body = body;
-            Author = author;
-            PublishDate = publishDate;
         }
 
         public string RandomFood()
