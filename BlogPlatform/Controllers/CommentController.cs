@@ -22,5 +22,26 @@ namespace blog_template_practice.Controllers
 
             return View(commentList);
         }
+
+        public ViewResult Create()
+        {
+            var listOfContents = commentRepo.Contents();
+
+            ViewBag.ContentId = listOfContents;
+
+            return View(new Comment());
+        }
+
+        [HttpPost]
+        public ActionResult Create(Comment model)
+        {
+            var listOfContents = commentRepo.Contents();
+
+            ViewBag.ContentId = listOfContents;
+
+            commentRepo.Create(model);
+
+            return RedirectToAction("Index", "Content");
+        }
     }
 }

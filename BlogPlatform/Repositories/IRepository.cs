@@ -15,5 +15,6 @@ namespace blog_template_practice.Repositories
         void Delete(T obj);
         void Update(T obj);
         List<Category> Categories();
+        List<Content> Contents();
     }
 }
