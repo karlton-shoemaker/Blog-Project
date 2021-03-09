@@ -1,5 +1,5 @@
 ﻿*{
-    color:saddlebrown;
+    color:#293C75;
     font-family:Trebuchet MS, Helvetica, sans-serif;
     line-height:1.618em;
     text-shadow:1px 0px #333;
@@ -8,7 +8,7 @@
 body{}
 
 body{
-    background-color:darkgray;
+    background-color:#062275;
 }
 
 a{
@@ -23,7 +23,7 @@ a:hover{
 main{
     max-width:50%;
     margin:auto;
-    background-color:aqua;
+    background-color:#0C46F5;
     padding:1em 2em;
     border-radius:15px;
 }
@@ -61,13 +61,13 @@ h2{
 }
 
 .EntirePost{
-    background-color: darkgrey;
+    background-color:#567EF7;
     padding: 1em 2em;
     border-radius: 15px;
 }
 
 .Comment{
-    background-color:darkgrey;
+    background-color:#567EF7;
     padding: 1em 2em 1em 4em;
     border-radius: 15px;
 }
@@ -77,7 +77,7 @@ h2{
 }
 
 .DeleteForm {
-    background-color:darkgrey;
+    background-color:#567EF7;
     padding: 1em 2em;
     border-radius:15px;
     max-width:60%;
