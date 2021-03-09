@@ -1,5 +1,5 @@
 ﻿*{
-    color:#293C75;
+    color:#1C2A54;
     font-family:Trebuchet MS, Helvetica, sans-serif;
     line-height:1.618em;
     text-shadow:1px 0px #333;
@@ -13,7 +13,7 @@ body{
 
 a{
     text-decoration:none;
-    color:deeppink;
+    color:#D40474;
 }
 
 a:hover{
@@ -60,7 +60,7 @@ h2{
     font-size:18px;
 }
 
-.EntirePost{
+.EntirePost, .TopicBackground, .row{
     background-color:#567EF7;
     padding: 1em 2em;
     border-radius: 15px;
