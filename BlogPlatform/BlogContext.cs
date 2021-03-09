@@ -88,21 +88,24 @@ namespace blog_template_practice
                     Id = 1,
                     Body = "Hot dogs are NOT sandwiches!!!! Why do people keep saying they are?",
                     Author = "sandwich_purist4779",
-                    ContentId = 1
+                    ContentId = 1,
+                    PostDate = DateTime.Now
                 },
                 new Comment()
                 {
                     Id = 2,
                     Body = "Okay, this is clearly talking about WandaVision, and that's not even a movie. This dude is whack",
                     Author = "MrStrange",
-                    ContentId = 2
+                    ContentId = 2,
+                    PostDate = DateTime.Now
                 },
                 new Comment()
                 {
                     Id = 3,
                     Body = "Ugh, seriously???? We only need one Fire Emblem character. Puke",
                     Author = "kirbymain",
-                    ContentId = 3
+                    ContentId = 3,
+                    PostDate = DateTime.Now
                 }
                 );
 

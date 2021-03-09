@@ -1,0 +1,19 @@
+﻿@model blog_template_practice.Models.Content
+
+<main>
+    <div class="EntirePost">
+        <p class="PostTitle">@Model.Title</p>
+        <p class="PostBody">@Model.Body</p>
+        <p class="ByLine">By: @Model.Author, on @Model.PostDate</p>
+        <p><a href="/Content/Update/@Model.Id">Edit Post</a> | <a href="/Content/Delete/@Model.Id">Delete Post</a></p>
+    </div>
+    @foreach (var item in Model.Comments)
+    {
+        <h3>Comments</h3>
+        <div class="Comment">
+            <p>@item.Body</p>
+            <p class="ByLine">By: @item.Author, on @item.PostDate</p>
+        </div>
+    }
+    <p>Add a Comment</p>
+</main>
