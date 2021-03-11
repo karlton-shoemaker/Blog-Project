@@ -1,0 +1,49 @@
+﻿@model blog_template_practice.Models.Content
+@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+
+
+<main>
+    <h2>Your New Post</h2>
+
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Title" class="control-label"></label>
+                    <input asp-for="Title" class="form-control" />
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Body" class="control-label"></label>
+                    <textarea asp-for="Body" class="form-control" rows="5" cols="40"></textarea>
+                    <span asp-validation-for="Body" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Author" class="control-label"></label>
+                    <input asp-for="Author" class="form-control" />
+                    <span asp-validation-for="Author" class="text-danger"></span>
+                </div>
+                @*<div class="form-group">
+                        <label asp-for="PublishDate" class="control-label"></label>
+                        <input asp-for="PublishDate" class="form-control" />
+                        <span asp-validation-for="PublishDate" class="text-danger"></span>
+                    </div>*@
+                <!--<div class="form-group">
+                    <label asp-for="PostDate" class="control-label"></label>-->
+                @*<input asp-for="PostDate" class="form-control" />*@
+                <!--<span asp-validation-for="PostDate" class="text-danger"></span>
+                </div>-->
+                <div class="form-group">
+                    <label asp-for="Category" class="control-label"></label>
+                    <select asp-for="CategoryId" class="form-control" asp-items="@(new SelectList(ViewBag.CategoryId, "Id", "Name"))"></select>
+                </div>
+                <hr />
+                <div class="form-group">
+                    <input class="Button" type="submit" value="Opine" />
+                </div>
+            </form>
+        </div>
+        <p><a href="/Home/">Home</a></p>
+    </div>
+</main>

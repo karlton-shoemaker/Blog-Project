@@ -1,0 +1,90 @@
+﻿*{
+    color:#1C2A54;
+    font-family:Trebuchet MS, Helvetica, sans-serif;
+    line-height:1.618em;
+    text-shadow:1px 0px #333;
+}﻿
+
+body{}
+
+body{
+    background-color:#062275;
+}
+
+a{
+    text-decoration:none;
+    color:#A8025B;
+}
+
+a:hover{
+    color:darkblue;
+}
+
+main{
+    max-width:50%;
+    margin:auto;
+    background-color:#0C46F5;
+    padding:1em 2em;
+    border-radius:15px;
+}
+
+hr{
+    opacity:0;
+    height:1px;
+    border:none;
+}
+
+textarea{
+    resize:none;
+}
+
+.form-group{
+    display:grid;
+    max-width:60%;
+    margin:auto;
+}
+
+#topicDropDown{
+    max-width:70%;
+}
+
+.Button{
+    max-width:6em;
+}
+
+h2{
+    text-align:center;
+}
+
+.PostTitle{
+    font-size:18px;
+}
+
+.EntirePost, .TopicBackground, .row{
+    background-color:#567EF7;
+    padding: 1em 2em;
+    border-radius: 15px;
+}
+
+.Comment{
+    background-color:#7897F5;
+    padding: 1em 2em 1em 4em;
+    border-radius: 15px;
+    max-width:90%;
+}
+
+.ByLine{
+    color:maroon;
+}
+
+.DeleteForm {
+    background-color:#567EF7;
+    padding: 1em 2em;
+    border-radius:15px;
+    max-width:60%;
+    margin:auto;
+}
+
+dt{
+    padding-bottom:2px;
+}

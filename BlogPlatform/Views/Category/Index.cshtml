@@ -1,7 +1,17 @@
-﻿
-@{
-    Layout = null; 
-}
+﻿@model IEnumerable<blog_template_practice.Models.Category>
 
-<h1>Index</h1>
-
+<main>
+    <h1>Topics</h1>
+    @foreach (var item in Model)
+    {
+        <div class="TopicBackground">
+            <h3><a href="/Category/Details/@item.Id">@item.Name</a></h3>
+            <p>@item.Description</p>
+            <p><a href="/Category/Update/@item.Id">Edit Topic</a></p>
+        </div>
+            <hr />
+    }
+    <p><a href="/Category/Create/">Add a New Topic</a></p>
+    <p><a href="/Content/Create/">Submit Post</a></p>
+    <p><a href="/Home/">Home</a></p>
+</main>

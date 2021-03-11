@@ -1,7 +1,28 @@
-﻿
-@{
-    Layout = null; 
-}
+﻿@model IEnumerable<blog_template_practice.Models.Content>
 
-<h1>Index</h1>
+<main>
+    <h1 id="alltop">All Your Dumb Opinions</h1>
 
+    @foreach (var post in Model)
+    {
+        <div class="EntirePost">
+            <p class="PostTitle">@post.Title</p>
+            <p class="PostBody">@post.Body</p>
+            <p class="ByLine">By: @post.Author, on @post.PostDate</p>
+            <p><a href="/Content/Update/@post.Id">Edit Post</a> | <a href="/Content/Delete/@post.Id">Delete Post</a> | <a href="/Comment/Create/">Add Comment</a> | <a href="/Content/Details/@post.Id">Full Post Details</a></p>
+        </div>
+        @foreach (var comment in post.Comments)
+        {
+                <div class="Comment">
+                    <p>Rebuttal:</p>
+                    <p>@comment.Body</p>
+                    <p class="ByLine">By: @comment.Author, on @comment.PostDate</p>
+                </div>
+
+        }
+        <hr />
+    }
+    <p><a href="/Category/">List of Topics</a></p>
+    <p><a href="/Home/">Home</a></p>
+    <p><a href="#alltop">Back to Top</a></p>
+</main>
